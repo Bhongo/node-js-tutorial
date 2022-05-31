@@ -25,3 +25,15 @@ setInterval(() => {
   count = count + 2;
   console.log(`${count} seconds have passed!`);
 }, 2000); // every 2 seconds
+
+// Ending a process using ClearInterval
+
+let newcount = 0;
+
+const timer = setInterval(() => {
+  newcount = newcount + 2;
+  console.log(`${newcount} seconds have passed!`);
+  if (newcount > 6) {
+    clearInterval(timer);
+  }
+}, 2000); // every 2 seconds
