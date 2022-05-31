@@ -22,6 +22,6 @@ setInterval(() => {
 let count = 0; // declaring a variable
 
 setInterval(() => {
-  count = count * 2;
+  count = count + 2;
   console.log(`${count} seconds have passed!`);
 }, 2000); // every 2 seconds
