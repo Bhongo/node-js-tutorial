@@ -48,3 +48,10 @@ var myDir = __dirname;
 console.log(myDir); // the dynamic way of getting the directory
 
 console.log(__filename); // gets the file name and directory
+
+//=======================================================
+// == Modules and Require
+//=======================================================
+
+const helper = require('./helper.js'); // importing the helper module
+console.log(helper('Avu')); // the helper must be required in order for this to work
