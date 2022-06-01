@@ -54,4 +54,6 @@ console.log(__filename); // gets the file name and directory
 //=======================================================
 
 const helper = require('./helper.js'); // importing the helper module
-console.log(helper('Avu')); // the helper must be required in order for this to work
+console.log(helper.user('Avu')); // the helper must be required in order for this to work
+console.log(helper.id(12345));
+console.log(helper.email('Avu@email.com'));
