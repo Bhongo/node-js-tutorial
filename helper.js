@@ -15,7 +15,7 @@ module.export = {
   // it can also be done like this ->  user: user
   user,
   id,
-  email
+  email,
 };
 
 // Old / long way of doing it this
