@@ -9,5 +9,5 @@ const server = http.createServer(function(req, res) { // args: request , respons
 })
 
 console.log('port 3000');
-server.listen(1000, '127.0.0.1');  // Node will listen for requests on this server port
+server.listen(3000, '127.0.0.1');  // Node will listen for requests on this server port
 
