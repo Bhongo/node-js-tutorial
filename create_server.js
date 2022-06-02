@@ -5,7 +5,7 @@ const http = require('http'); // bringing in a core module
 const server = http.createServer(function(req, res) { // args: request , response
     console.log(req.url); // print the URL's that are making requests
     res.writeHead(200, { 'Content-Type': 'text/plain' });  // what type of data to expect
-    res.end('NodeJs is fun'); // ending the response
+    res.end('NodeJs is fun. :) '); // ending the response
 })
 
 console.log('port 3000');
