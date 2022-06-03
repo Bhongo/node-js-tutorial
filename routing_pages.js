@@ -4,7 +4,9 @@ const http = require('http');
 const fs = require('fs');
 
 // sending the data to the client via web browser/ HTTP
-const server = http.createServer((req, res) => {
+const server = http.createServer(function(req, res) {
+  console.log('url', req.url)
+
   if (req.url === '/home' || req.url === '/') {
     res.writeHead(200, {'Content-Type': 'application/html' });
     fs.createReadStream(__dirname + '/index.html').pipe(res);
