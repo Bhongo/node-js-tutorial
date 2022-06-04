@@ -20,7 +20,7 @@ app.get('/about', function(req, res) { // Express knows the data is a string thu
 
 app.get('/profile/:name', function(req, res){
   // res.send('The profile name is ' + req.params.name);
-  const data = {age: 30, job: 'Node Developer'}
+  const data = {age: 30, job: 'Node Developer', friends: ['sarah', 'jane', 'willma']}
   res.render('profile', {person: req.params.name, data});
 });
 
