@@ -8,7 +8,18 @@
 </head>
 <body>
 <%- include('partials/nav.ejs'); %>
-    <h1>Hello Express Javascript</h1>
-    <h2>This is my about view </h2>
+    <h1>About Page</h1>
+    <form action="/about" method="POST"> 
+        <label for="who">Name</label>
+        <input type="text" name="who" id="who" value=''>
+
+        <label for="job">Job</label>
+        <input type="text" name="job" id="job" value=''>
+
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" value=''>
+
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>

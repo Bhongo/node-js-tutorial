@@ -1,8 +1,13 @@
 // Using the Express Module in NodeJs
 
 const express = require('express'); // bring in the module
+const bodyParser = require('body-parser'); // bring in the module
+
 
 const app = express(); // setting up the express application
+
+// create application/x-www-form-urlencoded parser
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.set('view engine', 'ejs'); // allowing the page to bring in HTML
 
@@ -22,7 +27,13 @@ app.get('/about', function (req, res) {
   // Express knows the data is a string thus, no need for content type
   // res.send('About page');
   // res.sendFile(__dir + '/about.html');
-  res.render('about');
+  //console.log(req.query);
+  res.render('about', { qs: req.query });
+});
+
+app.post('/about', urlencodedParser, function (req, res) {
+  // console.log(req.body);
+  res.render('about-success', { data: req.body });
 });
 
 app.get('/profile/:name', function (req, res) {
