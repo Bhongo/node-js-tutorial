@@ -4,10 +4,13 @@ const express = require('express');  // bring in the module
 
 const app = express(); // setting up the express application
 
+app.set('view engine', 'ejs'); // allowing the page to bring in HTML
+
 // Using the HTTP Express methods
 
 app.get('/', function(req, res) {
-   res.send('Home page');
+  // res.send('Home page');
+  res.sendFile()
 });
 
 app.get('/about', function(req, res) { // Express knows the data is a string thus, no need for content type
