@@ -6,8 +6,12 @@ const app = express(); // setting up the express application
 
 app.set('view engine', 'ejs'); // allowing the page to bring in HTML
 
-// Using the HTTP Express methods
+app.use('/assets', express.static('assets')); // using Middleware
+  // console.log(req.url);
+  // next();
+//})
 
+// Using the HTTP Express methods
 app.get('/', function (req, res) {
   // res.send('Home page');
   // res.sendFile(__dir + '/index.html');
